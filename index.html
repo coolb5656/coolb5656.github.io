@@ -12,9 +12,9 @@
     <div id="container">
       <h1>QR Code Scanner</h1>
 
-      <button id="btn-scan-qr">
+      <a id="btn-scan-qr">
         <img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499401426qr_icon.svg">
-      </button>
+      </a>
 
       <canvas hidden="" id="qr-canvas"></canvas>
 
@@ -22,6 +22,8 @@
         <b>Data:</b> <span id="outputData"></span>
       </div>
     </div>
+
+    <input type="file" accept="image/*" capture="environment">
 
     <script src="./src/qrCodeReader.js"></script>
   </body>
