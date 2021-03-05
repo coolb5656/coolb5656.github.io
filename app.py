@@ -100,13 +100,11 @@ class First_Multiple_Guess(tk.Frame):
         self.solution_var.set('')
         picks= ['A','B','C','D']
         y2= 60
-        quest= self.questions[0]
+        quest= self.questions[self.count]
         self.question_var.set(quest)
         self.frame= tk.Frame(self.parent,width=1200,height=360,
                              bg='gray')
-        self.frame.place(x=50,y=50)
-        self.a_count = 0
-        
+        self.frame.place(x=50,y=50)        
 
         for i in picks:
             answer= self.answers[self.a_count]
@@ -121,7 +119,7 @@ class First_Multiple_Guess(tk.Frame):
            and keep track of wins and losses,
            check for last question."""
 
-        sol= self.solutions[0]        
+        sol= self.solutions[self.count]        
         if sol.strip() == letter:
             self.total_count +=1
             self.win_count +=1
